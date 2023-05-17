@@ -161,7 +161,7 @@ const deleteAllNotificationController = async (req, res) => {
 //GET ALL DOC
 const getAllDocotrsController = async (req, res) => {
   try {
-    const doctors = await doctorModel.find({ status: "approve" });
+    const doctors = await doctorModel.find({ status: "approved" });
     res.status(200).send({
       success: true,
       message: "Docots Lists Fetched Successfully",
